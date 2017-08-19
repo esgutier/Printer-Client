@@ -64,7 +64,7 @@ public class Principal {
         Properties prop = new Properties();
         InputStream input = null;
         try {
-			input =  new FileInputStream("D:\\conf.properties");
+			input =  new FileInputStream("C:\\sp-printer-client\\conf.properties");
 			prop.load(input);			
 			estadio = prop.getProperty("estadio");
 		} catch (FileNotFoundException e) {
@@ -105,7 +105,7 @@ public class Principal {
             	resp.addHeader("Access-Control-Allow-Origin", "*");            	
                 Gson gson = new Gson();
                 String json = req.getParameter("tickets");
-                System.out.println("json:"+json);
+                //System.out.println("json:"+json);
                 Type listType = new TypeToken<ArrayList<Ticket>>() {}.getType();
                 ArrayList<Ticket> tickets = gson.fromJson(json, listType);
                 ImpresionCortesia printer = new ImpresionCortesia();
@@ -128,7 +128,7 @@ public class Principal {
             	resp.addHeader("Access-Control-Allow-Origin", "*"); 
             	Gson gson = new Gson();
                 String json = req.getParameter("tickets");
-                System.out.println("json:"+json);
+                //System.out.println("json:"+json);
                 Masiva masiva = gson.fromJson(json, Masiva.class);
                 ImpresionMasiva printer = new ImpresionMasiva();
                 PrintService service = printer.obtenerImpresoraService();
@@ -161,7 +161,7 @@ public class Principal {
             	resp.addHeader("Access-Control-Allow-Origin", "*");            	
                 Gson gson = new Gson();
                 String json = req.getParameter("tickets");
-                System.out.println("json:"+json);
+                //System.out.println("json:"+json);
                 Type listType = new TypeToken<ArrayList<Ticket>>() {}.getType();
                 ArrayList<Ticket> tickets = gson.fromJson(json, listType);
                 

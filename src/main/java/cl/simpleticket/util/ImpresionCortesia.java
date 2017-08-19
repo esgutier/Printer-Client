@@ -80,7 +80,7 @@ private static final String PRINTER_NAME = "ticket";
                  g2d.drawLine(20, 120, 185, 120);   
                  drawCenteredString(g2d,ticket.getSector()+" "+ticket.getComentario(),rec1,148,fontSector);
                  
-                 drawCenteredString(g2d,"Cortesía",rec1,158,fontSocio);
+                 drawCenteredString(g2d,"Entrada de Cortesía",rec1,158,fontSocio);
                  
                  drawCenteredString(g2d,ticket.getNombres(),rec1,175,fontSocio);
                  //drawCenteredString(g2d,ticket.getApellidos(),rec1,185,fontSocio);
